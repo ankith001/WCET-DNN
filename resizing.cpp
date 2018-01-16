@@ -19,10 +19,10 @@ resize_img(PyObject *ndarr_img)
     NDArrayConverter cvt;
     cv::Mat mat_img;
     mat_img = cvt.toMat(ndarr_img);
-    cv::Mat mat_resz_img;
-    double start, end;
     float new_width = 227;
     float new_height = 227;
+    cv::Mat mat_resz_img(new_width, new_height, CV_8UC3);
+    double start, end;
     int l_x, l_y;
     float height = mat_img.size().height;
     float width = mat_img.size().width;
