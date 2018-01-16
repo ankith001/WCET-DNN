@@ -29,7 +29,7 @@ catch (const cv::Exception &e) \
     PyErr_SetString(opencv_error, e.what()); \
     return 0; \
 }
-/*
+
 static PyObject* failmsgp(const char *fmt, ...);
 
 static size_t REFCOUNT_OFFSET = (size_t)&(((PyObject*)0)->ob_refcnt) +
@@ -44,7 +44,7 @@ static inline int* refcountFromPyObject(const PyObject* obj)
 {
     return (int*)((size_t)obj + REFCOUNT_OFFSET);
 }
-*/
+
 
 class NumpyAllocator;
 
